@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Un Maincra?</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            gap: 20px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #respuesta {
+            margin-top: 30px;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>¿Un Maincra?</h1>
+    <div class="buttons">
+        <button id="siBtn">Sí</button>
+        <button id="noBtn">No</button>
+    </div>
+    <div id="respuesta"></div>
+
+    <script>
+        const siBtn = document.getElementById('siBtn');
+        const noBtn = document.getElementById('noBtn');
+        const respuestaDiv = document.getElementById('respuesta');
+
+        function mostrarRespuesta(mensaje) {
+            respuestaDiv.textContent = mensaje;
+        }
+
+        siBtn.addEventListener('click', () => {
+            mostrarRespuesta("¡Agale Conectese XD!");
+        });
+
+        noBtn.addEventListener('click', () => {
+            mostrarRespuesta("Si no se conecta es pendejo :)");
+        });
+    </script>
+</body>
+</html>
